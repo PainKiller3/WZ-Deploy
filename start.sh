@@ -1,4 +1,1 @@
-#!/bin/bash
-
-python update.py
-exec python -m bot
+source .venv/bin/activate && python3 update.py && python3 -m bot
