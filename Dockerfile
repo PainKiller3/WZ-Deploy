@@ -1,4 +1,4 @@
-FROM pysocks/wzml:v3
+FROM reignz3/wzml:hk
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
