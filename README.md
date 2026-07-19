@@ -12,7 +12,7 @@
 <details>
   <summary><b>Expand All Steps to Deploy <sup><kbd>Click Here</kbd></sup></b></summary>
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SilentDemonSD/WZ-Deploy/blob/main/wzv3_hk_deploy.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PainKiller3/WZ-Deploy/blob/main/wzv3_hk_deploy.ipynb)
 
 **Step 1 :** 
 
@@ -22,57 +22,7 @@
 
 ---
 
-### 2️⃣ ***METHOD 2: (Github Workflow Guide)***
-
-<details>
-  <summary><b>Expand All Steps to Deploy <sup><kbd>Click Here</kbd></sup></b></summary>
-
-**Step 1 :** Fork and Star the Repository
-
-  - Click the **Fork** button at the top-right corner of this repository.
-    > Star the repository to show your support.
-
-**Step 2 :** Navigate to Your Forked Repository
-
-- Access your forked version of the repository.
-
-**Step 3 :** Enable `GitHub Actions` for your repo
-
-- Go to the **Settings** tab of your forked repository.
-- Enable **Actions** by selecting the appropriate option in the settings.
-
-**Step 4 :** Run the Deployment Workflow to Deploy
-
-  1. Open the **Actions** tab.
-  2. Select the `Deploy to Heroku` workflow from the available list.
-  3. Click **Run workflow** and fill out the required inputs:
-     
-   - **BOT_TOKEN**: Your Telegram bot token.
-   - **OWNER_ID**: Your Telegram ID.
-   - **DATABASE_URL**: MongoDB connection string.
-   - **TELEGRAM_API**: Telegram API ID (from [my.telegram.org](https://my.telegram.org/)).
-   - **TELEGRAM_HASH**: Telegram API hash (from [my.telegram.org](https://my.telegram.org/)).
-   - **HEROKU_APP_NAME**: Name of your Heroku app.
-   - **HEROKU_EMAIL**: Email address associated with your Heroku account.
-   - **HEROKU_API_KEY**: API key from your Heroku account.
-   - **HEROKU_TEAM_NAME** (Optional): Required only if deploying under a Heroku team account.
-   - **UPSTREAM_REPO**: Upstream Repo of your Fork or Main Repo
-     
-  4. Run the workflow and wait for it to complete.
-
-
-**Step 5 :** Finalize Setup of your bot
-
-- After deployment, check logs in your Heroku dashboard, If problem, Reach to Support Group.
-- Use the `/bsettings` command to upload sensitive files like `token.pickle` if needed as well as all the important Variables within it.
-  > **NOTE** : Don't Add any Other variable except the Variables mentioned here.
-
-
-</details>
-
----
-
-### 3️⃣ ***METHOD 3: (Heroku CLI Guide)***
+### 2️⃣ ***METHOD 2: (Heroku CLI Guide)***
 
 <details>
   <summary><b>Expand All Steps to Deploy <sup><kbd>Click Here</kbd></sup></b></summary>
@@ -81,7 +31,7 @@
 > Make sure git is Installed in your system or quick run `apt-get install git pip curl -y`
 
 ```shell
-git clone https://github.com/SilentDemonSD/WZ-Deploy wzbot && cd wzbot
+git clone https://github.com/PainKiller3/WZ-Deploy wzbot && cd wzbot
 ```
 
 **Step 2 :** Now Install Heroku in your Sytem or checkout Official Heroku Deploy Docs, or Download via `apt-get` or `npm`
@@ -150,7 +100,7 @@ nano config.py
   TELEGRAM_HASH = ""
   OWNER_ID = 0
   UPSTREAM_REPO = ""
-  UPSTREAM_BRANCH = "wzv3"
+  UPSTREAM_BRANCH = "wzml-hk"
   DATABASE_URL = ""
   BASE_URL = ""
   ```
@@ -205,7 +155,7 @@ heroku logs -a APP_NAME -t
     - **NOTE**: Don't forget to remove '<' and '>'. To generate gitlab Deploy Token. Follow [This](https://docs.gitlab.com/ee/user/project/deploy_tokens/#create-a-deploy-token)
         - Any change in docker you need to deploy/build again with updated repo to take effect. 
         - **No Need to delete .gitignore file or any File**
-- `UPSTREAM_BRANCH`: Upstream branch for update. Default is `wzv3`. `Str`
+- `UPSTREAM_BRANCH`: Upstream branch for update. Default is `wzml-hk`. `Str`
 
 </details>
 
@@ -213,6 +163,6 @@ heroku logs -a APP_NAME -t
 
 ### ⚠️ ***Branch Specifications:***
 
-- All files to be Uploaded in this `main` Branch and set Upstream as `wzv3` Branch of actual repo.
+- All files to be Uploaded in this `main` Branch and set Upstream as `wzml-hk` Branch of actual repo.
 
 ---

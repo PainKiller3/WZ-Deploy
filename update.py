@@ -58,14 +58,14 @@ if DATABASE_URL := config_file.get("DATABASE_URL", "").strip():
             old_config is not None and old_config == config_file or old_config is None
         ) and config_dict is not None:
             config_file["UPSTREAM_REPO"] = config_dict["UPSTREAM_REPO"]
-            config_file["UPSTREAM_BRANCH"] = config_dict.get("UPSTREAM_BRANCH", "wzv3")
+            config_file["UPSTREAM_BRANCH"] = config_dict.get("UPSTREAM_BRANCH", "wzml-hk")
             config_file["UPDATE_PKGS"] = config_dict.get("UPDATE_PKGS", "True")
         conn.close()
     except Exception as e:
         log_error(f"Database ERROR: {e}")
 
 UPSTREAM_REPO = config_file.get("UPSTREAM_REPO", "").strip()
-UPSTREAM_BRANCH = config_file.get("UPSTREAM_BRANCH", "").strip() or "wzv3"
+UPSTREAM_BRANCH = config_file.get("UPSTREAM_BRANCH", "").strip() or "wzml-hk"
 
 if UPSTREAM_REPO:
     if path.exists(".git"):
@@ -74,8 +74,8 @@ if UPSTREAM_REPO:
     update = srun(
         [
             f"git init -q \
-                     && git config --global user.email 105407900+SilentDemonSD@users.noreply.github.com \
-                     && git config --global user.name SilentDemonSD \
+                     && git config --global user.email ninadpatil100@gmail.com \
+                     && git config --global user.name PainKiller3 \
                      && git add . \
                      && git commit -sm update -q \
                      && git remote add origin {UPSTREAM_REPO} \
