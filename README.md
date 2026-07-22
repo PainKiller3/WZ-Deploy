@@ -12,7 +12,7 @@
 <details>
   <summary><b>Expand All Steps to Deploy <sup><kbd>Click Here</kbd></sup></b></summary>
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SilentDemonSD/WZ-Deploy/blob/main/wzv3_hk_deploy.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PainKiller3/WZ-Deploy/blob/main/wzv3_hk_deploy.ipynb)
 
 **Step 1 :** 
 
@@ -81,7 +81,7 @@
 > Make sure git is Installed in your system or quick run `apt-get install git pip curl -y`
 
 ```shell
-git clone https://github.com/SilentDemonSD/WZ-Deploy wzbot && cd wzbot
+git clone https://github.com/PainKiller3/WZ-Deploy wzbot && cd wzbot
 ```
 
 **Step 2 :** Now Install Heroku in your Sytem or checkout Official Heroku Deploy Docs, or Download via `apt-get` or `npm`
@@ -150,7 +150,7 @@ nano config.py
   TELEGRAM_HASH = ""
   OWNER_ID = 0
   UPSTREAM_REPO = ""
-  UPSTREAM_BRANCH = "wzv3"
+  UPSTREAM_BRANCH = "main"
   DATABASE_URL = ""
   BASE_URL = ""
   ```
@@ -205,7 +205,7 @@ heroku logs -a APP_NAME -t
     - **NOTE**: Don't forget to remove '<' and '>'. To generate gitlab Deploy Token. Follow [This](https://docs.gitlab.com/ee/user/project/deploy_tokens/#create-a-deploy-token)
         - Any change in docker you need to deploy/build again with updated repo to take effect. 
         - **No Need to delete .gitignore file or any File**
-- `UPSTREAM_BRANCH`: Upstream branch for update. Default is `wzv3`. `Str`
+- `UPSTREAM_BRANCH`: Upstream branch for update. Default is `main`. `Str`
 
 </details>
 
@@ -213,6 +213,6 @@ heroku logs -a APP_NAME -t
 
 ### ⚠️ ***Branch Specifications:***
 
-- All files to be Uploaded in this `main` Branch and set Upstream as `wzv3` Branch of actual repo.
+- All files to be Uploaded in this `main` Branch and set Upstream as `main` Branch of actual repo.
 
 ---

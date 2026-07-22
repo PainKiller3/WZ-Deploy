@@ -141,9 +141,9 @@ def _run_update(upstream_repo, upstream_branch, version):
             "config",
             "--global",
             "user.email",
-            "105407900+SilentDemonSD@users.noreply.github.com",
+            "ninadpatil100@gmail.com",
         ],
-        ["git", "config", "--global", "user.name", "SilentDemonSD"],
+        ["git", "config", "--global", "user.name", "PainKiler3"],
         ["git", "add", "."],
         ["git", "commit", "-sm", "update", "-q"],
         ["git", "remote", "add", "origin", upstream_repo],
@@ -188,7 +188,7 @@ def main():
         exit(1)
     _fetch_config_from_db(config_file, _db_partition_id(bot_token.split(":", 1)[0]))
     upstream_repo = config_file.get("UPSTREAM_REPO", "").strip()
-    upstream_branch = config_file.get("UPSTREAM_BRANCH", "").strip() or "wzv3"
+    upstream_branch = config_file.get("UPSTREAM_BRANCH", "").strip() or "main"
     _run_update(upstream_repo, upstream_branch, version)
     _cleanup()
     _update_packages()
