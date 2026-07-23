@@ -12,7 +12,7 @@
 <details>
   <summary><b>Expand All Steps to Deploy <sup><kbd>Click Here</kbd></sup></b></summary>
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PainKiller3/WZ-Deploy/blob/main/wzv3_hk_deploy.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PainKiller3/WZ-Deploy/blob/wzv3.1.3/wzv3_hk_deploy.ipynb)
 
 **Step 1 :** 
 
@@ -86,7 +86,7 @@ heroku create --region us --stack container APP_NAME
 - `--stack container` for setting stack to container for Dockerfile.
 - `--buildpack heroku/python` for using build slug for repo deploy and build.
 
-**Step 5 :** Now set all the Required Variables and Files into this Branch MAIN Repo like config.py, accounts.zip, token.pickle, All Private Files(optional)- 
+**Step 5 :** Now set all the Required Variables and Files into this Branch wzv3.1.3 Repo like config.py, accounts.zip, token.pickle, All Private Files(optional)- 
   > Only config.py Mabdatory with Only Mandatory Vars Only, After that Put all Private Files or Vars via Bot Settings `/bs`
 
 **To Edit Inside CLI (nano Editor):** _(Termux Users)_
@@ -100,7 +100,7 @@ nano config.py
   TELEGRAM_HASH = ""
   OWNER_ID = 0
   UPSTREAM_REPO = ""
-  UPSTREAM_BRANCH = "wzml-hk"
+  UPSTREAM_BRANCH = "wzv3.1.3"
   DATABASE_URL = ""
   BASE_URL = ""
   ```
@@ -124,7 +124,7 @@ heroku git:remote -a APP_NAME
 **Step 7 :** Now push to Heroku via git forcefully to build.
 
 ```shell
-git push heroku main -f
+git push heroku HEAD:main -f
 ```
 
 **Heroku Logs:** When checking Logs, Use this will give Complete Logs.
@@ -155,7 +155,7 @@ heroku logs -a APP_NAME -t
     - **NOTE**: Don't forget to remove '<' and '>'. To generate gitlab Deploy Token. Follow [This](https://docs.gitlab.com/ee/user/project/deploy_tokens/#create-a-deploy-token)
         - Any change in docker you need to deploy/build again with updated repo to take effect. 
         - **No Need to delete .gitignore file or any File**
-- `UPSTREAM_BRANCH`: Upstream branch for update. Default is `wzml-hk`. `Str`
+- `UPSTREAM_BRANCH`: Upstream branch for update. Default is `wzv3.1.3`. `Str`
 
 </details>
 
@@ -163,6 +163,6 @@ heroku logs -a APP_NAME -t
 
 ### ⚠️ ***Branch Specifications:***
 
-- All files to be Uploaded in this `main` Branch and set Upstream as `wzml-hk` Branch of actual repo.
+- All files to be Uploaded in this `wzv3.1.3` Branch and set Upstream as `wzv3.1.3` Branch of actual repo.
 
 ---
